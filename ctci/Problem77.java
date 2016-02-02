@@ -21,8 +21,43 @@ public class Problem77 {
 		}
 	}
 	
+	public static int root357(int n){
+		int oldValue = 1;
+		
+		int last3 = 3;
+		int last5 = 5;
+		int last7 = 7;
+		
+		int counter = 0;
+		
+		while(counter < n){
+			
+			int min3 = Math.min(Math.min(last3 * 3, last5 * 5), last7 * 7);
+			int min5 = Math.min(Math.min(last3 * 3, last5 * 5), last7 * 7);
+			int min7 = Math.min(Math.min(last3 * 3, last5 * 5), last7 * 7);
+			
+			if(min3 <= min5 && min3 <= min7 && min3 > oldValue){
+				last3 = min3;
+				oldValue = min3;
+			}else if(min5 <= min3 && min5 <= min7 && min5 > oldValue){
+				last5 = min5;
+				oldValue = min5;				
+			}else if(min7 > oldValue){
+				last7 = min7;
+				oldValue = min7;								
+			}else{
+				System.out.println("None of the 9 values were larger than the previous 357!");
+			}
+			System.out.println(Integer.toString(oldValue));
+			
+			counter++;
+		}
+		
+		return oldValue;
+	}
+	
 	// Simplest method, proceed until we find a nth value
-	public static int find357(int n){
+	public static int simple357(int n){
 		int value = -1;
 		int counter = 0;
 		int i = 0;;
@@ -38,15 +73,11 @@ public class Problem77 {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		System.out.println("Enter nth term:");
 		Scanner scanner = new Scanner(System.in);		
 		int n = scanner.nextInt();
-		scanner.close();
-		
-		System.out.println(Integer.toString(find357(n)));
-		
+		scanner.close();		
+		System.out.println(Integer.toString(root357(n)));
 	}
 
 }
