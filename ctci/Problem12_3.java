@@ -2,6 +2,9 @@ package ctci;
 
 import java.util.Scanner;
 
+
+// Given many (4 billion) integers (of unspecified size), find an integer not in that list,
+// using only 1MB of memory.
 public class Problem12_3 {
 
 	public static final int INT_SIZE = 32;

@@ -2,6 +2,8 @@ package ctci;
 
 import java.util.Scanner;
 
+
+// Create a program that finds the kth number that whose  only prime factors are 3,5 and 7.
 public class Problem7_7 {
 
 	public static boolean is357(int value){
