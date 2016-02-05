@@ -14,7 +14,7 @@ import java.util.Scanner;
 // Assume positive 31-bit integers.
 public class Problem12_3 {
 
-	public static final int INT_SIZE = 32;
+	public static final int INT_SIZE = 32 / 8;
 	public static final int MEM_SIZE = (int)Math.pow(2, 10);
 	public static final int NUM_BUCKETS = MEM_SIZE / (INT_SIZE * 2);
 	public static final int BUCKET_SIZE =  (int)Math.pow(2, 32) / NUM_BUCKETS;
