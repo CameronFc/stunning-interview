@@ -5,14 +5,28 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-#define N = 10
-#define M = 10
+#define N 10
+#define M 10
 
 int main() {
 
-  printf("Nice!\n");
+  int half = (N + M) / 2;
 
-  // Outline of algorithm :
-  // Start with two different-sized 
+  int currentSeparatorIndex = 0;
+
+  int* arrayA = malloc(sizeof(int*) * N);
+  int* arrayB = malloc(sizeof(int*) * M);
+
+  for(int i = 0; i < N; i++) {
+    arrayA[i] = i;
+  }
+  for(int i = 0; i < M; i++) {
+    arrayB[i] = i + 6;
+    printf("%d\n", arrayB[i]);
+  }
+
+  
 }
+
