@@ -1,4 +1,6 @@
 
+// Question 12.1 solution. (C++)
+
 #include <iostream>
 #include <stdio.h>
 
