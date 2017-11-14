@@ -10,12 +10,15 @@ class Problem {
 public:
   static bool isUnique(string s) {
 
+    // Every time we read a character, switch its bit in this array.
+    // It the bit is already 1, we have a duplicate.
     char charsUsed[32] = {}; // 1 bit for each character. Init to \0
 
     for(int i = 0; i < s.size(); i++) {
       uint8_t k = s[i] >> 3;
       uint8_t charBit = (1 << (s[i] % 8));
       if((charsUsed[k] & charBit) > 0) {
+        // Matching bit => duplicate.
         return false;
       } else {
         charsUsed[k] = charsUsed[k] ^ charBit;
