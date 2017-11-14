@@ -10,6 +10,9 @@ using std::cout;
 using std::endl;
 using std::queue;
 
+// There is also another solution using 2 passes - forward pass to count the
+// spaces, then a backward pass to swap characters to their proper place.
+
 class Problem {
 public:
   static void HTMLify(string& input, int length) {
