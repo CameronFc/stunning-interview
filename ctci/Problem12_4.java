@@ -2,9 +2,6 @@ package ctci;
 
 import java.util.Random;
 
-
-// Given an array consisting of integer from 0 to N: N <= 32000; N unknown; duplicates possible;
-// Print all duplicates.
 public class Problem12_4 {
 
 	public static void main(String[] args){

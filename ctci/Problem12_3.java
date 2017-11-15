@@ -8,9 +8,6 @@ import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
 
-
-// Given many (4 billion) integers (of unspecified size), find an integer not in that list,
-// using only 1MB of memory.
 // Assume positive 31-bit integers.
 public class Problem12_3 {
 
